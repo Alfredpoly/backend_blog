@@ -14,11 +14,11 @@ module.exports = ({ env }) => ({
   connection: {
     client: "postgres",
     connection: {
-      host: process.env("DATABASE_HOST", "strapi.c9jwteiydysx.eu-west-3.rds.amazonaws.com"),
-      port: process.env.int("DATABASE_PORT", 5432),
-      database: process.env("DATABASE_NAME", "postgres"),
-      user: process.env("DATABASE_USERNAME", "postgres"),
-      password: process.env("DATABASE_PASSWORD", ""),
+      host: env("DATABASE_HOST", "strapi.c9jwteiydysx.eu-west-3.rds.amazonaws.com"),
+      port: env.int("DATABASE_PORT", 5432),
+      database: env("DATABASE_NAME", "postgres"),
+      user: env("DATABASE_USERNAME", "postgres"),
+      password: env("DATABASE_PASSWORD", ""),
       // schema: env('DATABASE_SCHEMA', 'public'), // Not required
       ssl: {
         rejectUnauthorized: env.bool('DATABASE_SSL_SELF', false),
