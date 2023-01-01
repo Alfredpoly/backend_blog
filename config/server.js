@@ -4,5 +4,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array('APP_KEYS'),
   },
-  // url: 'https://cms.alfredpolycarpe.com'
+  url: 'https://strapi-server.herokuapp.com/'
 });
